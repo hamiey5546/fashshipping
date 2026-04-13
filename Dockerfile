@@ -17,16 +17,19 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-# Install PHP dependencies
+# Install dependencies
 RUN composer install --no-dev --optimize-autoloader
-
-# Generate Laravel key
-RUN php artisan key:generate
 
 # Fix permissions
 RUN chmod -R 777 storage bootstrap/cache
 
-# Cache Laravel config for production
+# 🔥 CLEAR OLD CACHE (THIS IS THE FIX)
+RUN php artisan config:clear
+RUN php artisan cache:clear
+RUN php artisan route:clear
+RUN php artisan view:clear
+
+# 🔥 REBUILD CACHE
 RUN php artisan config:cache
 RUN php artisan route:cache
 RUN php artisan view:cache
@@ -34,5 +37,5 @@ RUN php artisan view:cache
 # Expose port
 EXPOSE 10000
 
-# Start Laravel server
+# Start server
 CMD php artisan serve --host=0.0.0.0 --port=10000
