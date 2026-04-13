@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b33"/>
+      <stop offset="1" stop-color="#103a64"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(860 250) rotate(55) scale(560 420)">
+      <stop offset="0" stop-color="#4cc3ff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#4cc3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <g opacity="0.92">
+    <path d="M260 610V360L600 250L940 360V610H260Z" fill="#0b2a4e"/>
+    <path d="M260 360L600 250L940 360" stroke="#79d7ff" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M340 610V410H520V610H340Z" fill="#103a64"/>
+    <path d="M560 610V410H860V610H560Z" fill="#0f355f"/>
+    <path d="M360 450H500" stroke="#4cc3ff" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"/>
+    <path d="M360 500H500" stroke="#4cc3ff" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+    <path d="M580 450H840" stroke="#4cc3ff" stroke-opacity="0.45" stroke-width="6" stroke-linecap="round"/>
+    <path d="M580 500H840" stroke="#4cc3ff" stroke-opacity="0.3" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

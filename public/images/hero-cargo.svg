@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b33"/>
+      <stop offset="0.6" stop-color="#0a2a4a"/>
+      <stop offset="1" stop-color="#103a64"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1650 420) rotate(60) scale(920 680)">
+      <stop offset="0" stop-color="#4cc3ff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#4cc3ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b2a4e"/>
+      <stop offset="1" stop-color="#061b33"/>
+    </linearGradient>
+    <linearGradient id="ship" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2f57"/>
+      <stop offset="1" stop-color="#061b33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4cc3ff"/>
+      <stop offset="1" stop-color="#79d7ff"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .55 0" result="c"/>
+      <feBlend in="SourceGraphic" in2="c" mode="normal"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1400" fill="url(#bg)"/>
+  <rect width="2400" height="1400" fill="url(#glow)"/>
+
+  <g opacity="0.25">
+    <path d="M-40 560C320 480 560 520 860 590C1160 660 1460 670 1760 610C2060 550 2260 490 2460 520V720H-40V560Z" fill="#0b2a4e"/>
+    <path d="M-40 620C280 560 620 600 900 670C1180 740 1500 750 1790 700C2080 650 2280 590 2460 620V860H-40V620Z" fill="#061b33"/>
+  </g>
+
+  <rect y="760" width="2400" height="640" fill="url(#sea)"/>
+
+  <g opacity="0.18">
+    <path d="M0 920C260 880 520 900 780 950C1040 1000 1300 1010 1560 970C1820 930 2080 880 2400 910V980C2080 950 1820 1000 1560 1030C1300 1060 1040 1050 780 1000C520 950 260 930 0 960V920Z" fill="#4cc3ff"/>
+    <path d="M0 1040C320 1010 560 1040 820 1090C1080 1140 1340 1150 1600 1120C1860 1090 2100 1040 2400 1065V1120C2080 1100 1860 1145 1600 1170C1340 1195 1080 1180 820 1125C560 1070 320 1050 0 1070V1040Z" fill="#79d7ff"/>
+  </g>
+
+  <g filter="url(#soft)">
+    <path d="M420 930H1720L1890 860H2220L2060 1000H520C470 1000 430 980 420 930Z" fill="url(#ship)"/>
+    <path d="M560 920H1700L1810 875H2120L1990 970H620C590 970 570 955 560 920Z" fill="#0a2540" opacity="0.55"/>
+    <rect x="740" y="720" width="130" height="150" rx="16" fill="#0b2a4e"/>
+    <rect x="890" y="700" width="130" height="170" rx="16" fill="#0f355f"/>
+    <rect x="1040" y="740" width="130" height="130" rx="16" fill="#0b2a4e"/>
+    <rect x="1190" y="690" width="150" height="180" rx="16" fill="#103a64"/>
+    <rect x="1360" y="730" width="140" height="140" rx="16" fill="#0b2a4e"/>
+    <rect x="1520" y="710" width="120" height="160" rx="16" fill="#0f355f"/>
+    <rect x="1680" y="760" width="110" height="110" rx="16" fill="#0b2a4e"/>
+    <path d="M1910 845H2050V780H1910V845Z" fill="#0f355f"/>
+    <path d="M2050 845H2120V760H2050V845Z" fill="#0b2a4e"/>
+    <path d="M2120 845H2200V790H2120V845Z" fill="#103a64"/>
+    <path d="M560 920H2200" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>

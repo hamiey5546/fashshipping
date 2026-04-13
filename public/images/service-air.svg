@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b33"/>
+      <stop offset="1" stop-color="#0a2a4a"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 260) rotate(40) scale(560 420)">
+      <stop offset="0" stop-color="#4cc3ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#4cc3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <g opacity="0.92">
+    <path d="M240 470L980 360L1010 395L640 520L690 610L650 625L560 545L330 600L300 570L520 510L240 500V470Z" fill="#103a64"/>
+    <path d="M305 575L330 600" stroke="#4cc3ff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M565 545L645 625" stroke="#4cc3ff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M240 500L520 510" stroke="#79d7ff" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"/>
+    <path d="M520 510L980 360" stroke="#4cc3ff" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

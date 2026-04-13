@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+@keyframes fs-float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fs-shimmer {
+    0% { transform: translateX(-30%); opacity: .0; }
+    15% { opacity: .35; }
+    50% { opacity: .15; }
+    100% { transform: translateX(130%); opacity: 0; }
+}
+
+@keyframes fs-dash {
+    0% { stroke-dashoffset: 880; }
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fs-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.fs-hero-bg {
+    background:
+        radial-gradient(700px 400px at 20% 20%, rgba(255, 122, 0, 0.10), transparent 60%),
+        radial-gradient(900px 520px at 80% 10%, rgba(10, 37, 64, 0.13), transparent 65%),
+        radial-gradient(700px 420px at 70% 80%, rgba(10, 37, 64, 0.08), transparent 65%),
+        linear-gradient(180deg, #f9fafb 0%, #ffffff 45%, #f8fafc 100%);
+}
+
+.fs-grid-overlay {
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.12) 1px, transparent 1.8px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(65% 60% at 50% 35%, black 40%, transparent 70%);
+}
+
+.fs-shimmer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.fs-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    bottom: -30%;
+    width: 40%;
+    left: -40%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .55), transparent);
+    transform: rotate(12deg);
+    animation: fs-shimmer 5.5s infinite;
+}
+
+.fs-reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 700ms cubic-bezier(.16, 1, .3, 1), transform 700ms cubic-bezier(.16, 1, .3, 1);
+    will-change: opacity, transform;
+}
+
+.fs-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fs-delay-100 { transition-delay: 100ms; }
+.fs-delay-200 { transition-delay: 200ms; }
+.fs-delay-300 { transition-delay: 300ms; }
+.fs-delay-400 { transition-delay: 400ms; }
+.fs-delay-500 { transition-delay: 500ms; }
+
+.fs-marquee {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0, black 12%, black 88%, transparent 100%);
+}
+
+.fs-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 28px;
+    animation: fs-marquee 28s linear infinite;
+}
+
+.fs-dash {
+    stroke-dasharray: 10 16;
+    stroke-dashoffset: 880;
+    animation: fs-dash 2.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fs-shimmer::after,
+    .fs-marquee-track,
+    .fs-dash {
+        animation: none;
+    }
+
+    .fs-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

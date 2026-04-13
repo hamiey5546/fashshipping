@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b33"/>
+      <stop offset="1" stop-color="#103a64"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a2a4a"/>
+      <stop offset="1" stop-color="#061b33"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect y="420" width="1200" height="380" fill="url(#sea)"/>
+  <g opacity="0.95">
+    <path d="M220 520H800L920 470H1100L1020 600H260C235 600 225 585 220 520Z" fill="#0f355f"/>
+    <rect x="350" y="380" width="110" height="120" rx="14" fill="#0b2a4e"/>
+    <rect x="470" y="360" width="110" height="140" rx="14" fill="#103a64"/>
+    <rect x="590" y="390" width="110" height="110" rx="14" fill="#0b2a4e"/>
+    <path d="M260 600C410 575 560 580 710 610C860 640 980 635 1100 615V650C980 670 860 675 710 645C560 615 410 610 260 635V600Z" fill="#4cc3ff" fill-opacity="0.22"/>
+    <path d="M260 670C430 645 590 655 740 690C890 725 1000 720 1100 700V735C1000 750 890 755 740 720C590 685 430 675 260 700V670Z" fill="#79d7ff" fill-opacity="0.14"/>
+  </g>
+</svg>
