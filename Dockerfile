@@ -17,14 +17,8 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN chmod -R 777 storage bootstrap/cache
 
-# 🔥 CREATE SQLITE FILE (THIS FIXES YOUR ERROR)
+# ✅ Create SQLite file
 RUN touch database/database.sqlite
-
-# 🔥 CLEAR CACHE
-RUN php artisan config:clear
-RUN php artisan cache:clear
-RUN php artisan route:clear
-RUN php artisan view:clear
 
 EXPOSE 10000
 
